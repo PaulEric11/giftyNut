@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Peanut Burger Delight</title>
+	<meta name="description" content="Fresh, crunchy peanut burger snacks. Order for delivery." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🥜%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="logo">🥜 Peanut Burger Delight</div>
+			<nav class="nav">
+				<a href="#home">Home</a>
+				<a href="#products">Products</a>
+				<a href="#about">About</a>
+				<a href="#testimonials">Reviews</a>
+				<a href="#faq">FAQ</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<button class="cart-button" id="openCartBtn" aria-label="Open cart">
+				<span class="cart-icon">🛒</span>
+				<span id="cartCount" class="cart-count">0</span>
+			</button>
+		</div>
+	</header>
+
+	<main>
+		<section id="home" class="hero">
+			<div class="container hero-inner">
+				<div class="hero-text">
+					<h1>Crunchy. Fresh. Irresistible.</h1>
+					<p>Taste the best homemade peanut burger in town. Perfect for snacks, parties, and gifts. We deliver fast to your doorstep.</p>
+					<div class="hero-cta">
+						<a href="#products" class="btn btn-primary">Shop Now</a>
+						<a href="#about" class="btn btn-outline">Learn More</a>
+					</div>
+				</div>
+				<div class="hero-media" aria-hidden="true">
+					<div class="peanut-blob">🥜</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="products" class="section">
+			<div class="container">
+				<div class="section-head">
+					<h2>Our Products</h2>
+					<p>Freshly prepared and sealed for maximum crunch.</p>
+				</div>
+				<div id="productGrid" class="product-grid"></div>
+			</div>
+		</section>
+
+		<section id="about" class="section alt">
+			<div class="container two-col">
+				<div>
+					<h2>About Us</h2>
+					<p>We are passionate about snacks that make you smile. Our peanut burger is made in small batches with quality ingredients and a whole lot of love.</p>
+					<ul class="ticks">
+						<li>Made fresh weekly</li>
+						<li>Sealed for freshness</li>
+						<li>Bulk and event orders available</li>
+					</ul>
+				</div>
+				<div class="about-card">
+					<div class="about-emoji">✨</div>
+					<div class="about-stats">
+						<div><strong>5000+</strong><span>packs sold</span></div>
+						<div><strong>4.9/5</strong><span>customer rating</span></div>
+						<div><strong>24-48h</strong><span>delivery time</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="testimonials" class="section">
+			<div class="container">
+				<div class="section-head">
+					<h2>Loved by Snack Lovers</h2>
+				</div>
+				<div class="testimonials">
+					<blockquote>“The crunch is unbelievable. My kids ask for more every week!” <span>— Ada</span></blockquote>
+					<blockquote>“Perfect for office treats and party packs.” <span>— Musa</span></blockquote>
+					<blockquote>“Fast delivery and always fresh.” <span>— Kofi</span></blockquote>
+				</div>
+			</div>
+		</section>
+
+		<section id="faq" class="section alt">
+			<div class="container">
+				<div class="section-head">
+					<h2>Frequently Asked Questions</h2>
+				</div>
+				<div class="faq">
+					<div class="faq-item">
+						<button class="faq-q" aria-expanded="false">How long does delivery take?</button>
+						<div class="faq-a">We typically deliver within 24-48 hours in-city. For other areas, 2-5 days.</div>
+					</div>
+					<div class="faq-item">
+						<button class="faq-q" aria-expanded="false">Do you offer bulk or event orders?</button>
+						<div class="faq-a">Yes, we offer discounted rates for large orders. Contact us for a quote.</div>
+					</div>
+					<div class="faq-item">
+						<button class="faq-q" aria-expanded="false">How do I store the peanut burger?</button>
+						<div class="faq-a">Keep sealed in a cool, dry place. Best consumed within 4 weeks.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="section">
+			<div class="container two-col contact">
+				<div>
+					<h2>Contact</h2>
+					<p>Questions or special requests? Reach out any time.</p>
+					<p><strong>WhatsApp:</strong> <a id="contactWhatsApp" href="#" target="_blank" rel="noopener">Chat with us</a></p>
+					<p><strong>Email:</strong> <a id="contactEmail" href="mailto:orders@example.com">orders@example.com</a></p>
+				</div>
+				<form id="checkoutForm" class="card">
+					<h3>Checkout</h3>
+					<div class="form-row">
+						<label for="customerName">Full name</label>
+						<input id="customerName" name="customerName" type="text" required placeholder="e.g. Jane Doe" />
+					</div>
+					<div class="form-row">
+						<label for="customerPhone">Phone (WhatsApp)</label>
+						<input id="customerPhone" name="customerPhone" type="tel" required placeholder="e.g. +2348012345678" />
+					</div>
+					<div class="form-row">
+						<label for="customerAddress">Delivery address</label>
+						<textarea id="customerAddress" name="customerAddress" rows="3" required placeholder="Street, city, details"></textarea>
+					</div>
+					<div class="form-row two">
+						<div>
+							<label for="deliveryMethod">Delivery</label>
+							<select id="deliveryMethod" name="deliveryMethod">
+								<option value="standard">Standard (24-48h)</option>
+								<option value="express">Express (same day)</option>
+							</select>
+						</div>
+						<div>
+							<label for="deliveryNotes">Notes</label>
+							<input id="deliveryNotes" name="deliveryNotes" type="text" placeholder="Gate code, time, etc." />
+						</div>
+					</div>
+					<div class="checkout-summary">
+						<div class="summary-line"><span>Items</span><span id="summaryItems">0</span></div>
+						<div class="summary-line"><span>Subtotal</span><span id="summarySubtotal">0</span></div>
+						<div class="summary-line"><span>Delivery</span><span id="summaryDelivery">0</span></div>
+						<div class="summary-total"><span>Total</span><span id="summaryTotal">0</span></div>
+					</div>
+					<div class="form-actions">
+						<button type="button" id="payOnlineBtn" class="btn btn-outline" disabled>Pay Online (coming soon)</button>
+						<button type="submit" class="btn btn-primary">Place Order via WhatsApp</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-grid">
+			<div class="footer-brand">
+				<div class="logo">🥜 Peanut Burger Delight</div>
+				<p class="tag">Crunchy, fresh peanut burger delivered fast.</p>
+				<div class="socials">
+					<a href="https://wa.me/2348012345678" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">🟢</a>
+					<a href="https://instagram.com/yourbrand" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">📸</a>
+					<a href="https://facebook.com/yourbrand" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">📘</a>
+					<a href="https://tiktok.com/@yourbrand" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">🎵</a>
+					<a href="https://x.com/yourbrand" target="_blank" rel="noopener" aria-label="X" title="X (Twitter)">✖️</a>
+					<a href="https://youtube.com/@yourbrand" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">▶️</a>
+				</div>
+			</div>
+			<div class="footer-links">
+				<strong>Explore</strong>
+				<a href="#home">Home</a>
+				<a href="#products">Products</a>
+				<a href="#about">About</a>
+				<a href="#testimonials">Reviews</a>
+				<a href="#faq">FAQ</a>
+			</div>
+			<div class="footer-contact">
+				<strong>Contact</strong>
+				<a href="https://wa.me/2348012345678" target="_blank" rel="noopener">WhatsApp: +234 801 234 5678</a>
+				<a href="tel:+2348012345678">Phone: +234 801 234 5678</a>
+				<a href="mailto:orders@example.com">Email: orders@example.com</a>
+				<span>Address: 123 Snack Street, City, Country</span>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<div>© <span id="year"></span> Peanut Burger Delight</div>
+			<div class="legal-links">
+				<a href="#privacy">Privacy</a>
+				<a href="#terms">Terms</a>
+			</div>
+		</div>
+	</footer>
+
+	<div id="cartPanel" class="cart-panel" aria-hidden="true" aria-labelledby="openCartBtn">
+		<div class="cart-header">
+			<h3>Your Cart</h3>
+			<button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+		</div>
+		<div id="cartItems" class="cart-items"></div>
+		<div class="cart-footer">
+			<div class="cart-totals">
+				<div><span>Subtotal</span><strong id="cartSubtotal">₦0</strong></div>
+				<div><span>Delivery</span><strong id="cartDelivery">₦0</strong></div>
+				<div class="total"><span>Total</span><strong id="cartTotal">₦0</strong></div>
+			</div>
+			<a id="goToCheckout" href="#contact" class="btn btn-primary btn-full">Go to Checkout</a>
+		</div>
+	</div>
+
+	<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+	<script src="script.js"></script>
+</body>
+</html> 
